@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="_5M12mauiListViewPicker.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            x:Name="Tlo">
+            <Label
+                Text="Kolor czcionki: "
+                FontSize="Large"
+                />
+            <HorizontalStackLayout Spacing="50">
+                <ListView
+                x:Name="lvKolory"
+                ItemSelected="itemSelect"
+>
+                    <ListView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>różowy</x:String>
+                            <x:String>czerwony</x:String>
+                            <x:String>zielony</x:String>
+                            <x:String>niebieski</x:String>
+                        </x:Array>
+                    </ListView.ItemsSource>
+                </ListView>
+                <Label
+                    Text="Napis próbny"
+                    FontSize="20"
+                    x:Name="lblNapis"
+                    VerticalOptions="Center"
+                    />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label
+                    Text="Kolor tła: "
+                    VerticalOptions="Center"
+                    />
+                <Picker
+                    x:Name="pckTlo"
+                    SelectedIndexChanged="selTlo"
+                    VerticalOptions="Center"
+>
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>biały</x:String>
+                            <x:String>niebieski</x:String>
+                            <x:String>żółty</x:String>
+                            <x:String>pomarańczowy</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
